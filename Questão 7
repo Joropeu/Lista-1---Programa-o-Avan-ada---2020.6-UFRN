@@ -1,0 +1,4 @@
+p = mat + 1;    //Legal
+p = mat++;      //Ilegal, não é possível incrementar valor do tipo int ao ponteiro.
+p = ++mat;      //Ilegal, não é possível incrementar valor do tipo int ao ponteiro.
+x = (*mat)++;   //Ilegal, não é possível incrementar valor do tipo int ao ponteiro.
