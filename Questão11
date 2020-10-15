@@ -1,0 +1,19 @@
+float aloha[10], coisas[10][5], *pf, value = 2.2;
+	int i=3;
+
+	aloha[2] = value;	// válido//
+	
+	scanf("%f", &aloha); 	// válido, contudo, se o vetor não for preenchido pode aparecer valores estranhos na saída (lixo). //
+	
+	aloha = value";		// inválido, pois é uma variável do tipo vetor, logo, não pode receber um valor sem especificar o endereço da posição do vetor.//
+	
+	printf("%f", aloha);	// válido//
+	
+	coisas[4][4] = aloha[3];// válido//
+	
+	coisas[5] = aloha;	// inválido, pois cada posição do vetor se comporta como uma variável simples, ou seja, não pode atribuir, a uma variável, um vetor. //
+	
+	pf = value;		// inválido, devido imcompatibilidades dos tipos das variáveis(valores do tipo inteiro.).A variável 'pf' é do tipo ponteiro, que no caso só pode receber //
+                                              
+	
+	pf = aloha;		// válido.//
