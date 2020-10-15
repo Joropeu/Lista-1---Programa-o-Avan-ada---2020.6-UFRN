@@ -1,0 +1,30 @@
+//O uso de ponteiros para funções em C serve principalmente para definir,
+em tempo de execução, qual função será executada,
+sem a necessidade de escrever o nome da função,
+de forma explícita naquele ponto do código.
+
+Isto é. Um ponteiro ou apontador é um tipo de dado de uma linguagem de programação
+cujo valor se refere diretamente a um outro valor alocado em outra área da memória,
+através de seu endereço. Um ponteiro é uma simples implementação do tipo referência.//
+
+
+
+#include <stdio.h>
+void soma (int a, int b){
+    printf("Soma=%d\n", a+b);
+}
+void subtracao (int a, int b) {
+    printf("subtracao= %d", a-b);
+}
+void multiplicacao(int a, int b){
+    printf("multiplicacao=%d\n", a*b);
+}
+int main()
+{
+    void (*pf_array[])(int, int)={soma, subtracao, multiplicacao};
+   int opcao, a=3, b=4;
+    printf("digite sua opcao: \n");
+    scanf("%d", &opcao);
+    (*pf_array[opcao])(a,b);
+            return 0;
+}
